@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Inicio', 'Servicios', 'Guia','Contacto'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const NavBar=()=> {
@@ -36,10 +36,11 @@ export const NavBar=()=> {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar 
+    position="static"
+    color= "success">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -58,17 +59,13 @@ export const NavBar=()=> {
             LOGO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
+          <Box sx={{ 
+            flexGrow: 1, 
+            display: 'flex',
+            justifyContent:'center'
+            
+            }}>
+           
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -84,7 +81,9 @@ export const NavBar=()=> {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'flex', md: 'none' },
+                justifyContent:'center'
+                
               }}
             >
               {pages.map((page) => (
@@ -125,14 +124,18 @@ export const NavBar=()=> {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0,
+          
+         }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: '45px',
+              justifyContent:'center'
+             }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
