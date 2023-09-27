@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import Indio from '../../assets/indio.jpg'
-import { Margin } from '@mui/icons-material'
+
 import Rio from '../../assets/rio.jpg'
 
 

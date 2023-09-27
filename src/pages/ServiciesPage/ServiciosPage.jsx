@@ -1,10 +1,8 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import Indio from '../../assets/indio.jpg'
-import { Margin } from '@mui/icons-material'
-import Rio from '../../assets/rio.jpg'
-
-
+import teque from '../../assets/tequendama.jpg'
+import gachas from '../../assets/gachas.jpg'
+import chorro from '../../assets/chorro.jpg'
 
 
 
@@ -42,9 +40,32 @@ export const ServiciosPage = () => {
                 marginTop: 2
             }}>
 
-                <img src={Rio} />
-                <h1>Nuestros planes de tour son los mejores para cumplir tus deseos de conocer Colombia.</h1>
+                <img src={teque} />
+                <img src={gachas} />
+                <img src={chorro} />
+               
 
+
+            </Box>
+            <Box sx={{
+                display: "flex",
+                flexDirection: "row",
+                marginLeft:27,
+                alignItems: "center",
+                marginTop: 2
+            }}>
+
+
+                <Box sx={{
+                    display: "flex",
+                    flexDirection: "column",
+
+                }}>
+                   
+                    <h1>Los mejores precios para paquetes turisticos de Colombia.</h1>
+
+                </Box>
+                
 
             </Box>
 
