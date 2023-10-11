@@ -88,20 +88,20 @@ const customStyles = {
     },
     h1: {
         fontFamily: "Comic Sans MS, sans-serif", 
-        fontSize: "40px", // Aumenta el tamaño de la fuente
-        marginBottom: "1rem", // Aumenta el espacio inferior
+        fontSize: "40px", 
+        marginBottom: "1rem", 
         textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", 
     },
     section: {
-        padding: "2rem", // Aumenta el espacio interior
+        padding: "2rem", 
         textAlign: "center",
     },
     card: {
-        width: "350px", // Aumenta el ancho de las tarjetas
+        width: "350px", 
         margin: "1rem",
     },
     media: {
-        height: "240px", // Aumenta la altura de las imágenes
+        height: "240px",
     },
 };
 
