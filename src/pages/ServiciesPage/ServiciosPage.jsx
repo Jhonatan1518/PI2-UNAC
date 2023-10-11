@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardMedia, Typography, Paper } from '@mui/material';
 import Bar from '../../components/Bar';
 import Image1 from '../../assets/image1.jpeg'; 
 import Image2 from '../../assets/image2.jpeg'; 
 import Image3 from '../../assets/image3.jpeg';
 import Image4 from '../../assets/image4.jpeg'; 
 import Image5 from '../../assets/image5.jpeg'; 
-import Image6 from '../../assets/image6.jpeg';
+import Image6 from '../../assets/image6.jpeg'; 
 import Image7 from '../../assets/image7.jpeg'; 
 import Image8 from '../../assets/image8.jpeg'; 
 import Image9 from '../../assets/image9.jpeg';
@@ -88,26 +88,32 @@ const customStyles = {
     },
     h1: {
         fontFamily: "Comic Sans MS, sans-serif", 
-        fontSize: "40px", 
-        marginBottom: "1rem", 
+        fontSize: "42px", 
+        marginBottom: "0.5rem",
         textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", 
     },
     section: {
-        padding: "2rem", 
+        padding: "1rem",
+        marginBottom: "2rem",
         textAlign: "center",
     },
     card: {
-        width: "350px", 
+        width: "350px",
         margin: "1rem",
     },
     media: {
-        height: "240px",
+        height: "260px", 
     },
 };
 
 export const ServiciosPage = () => {
-    const firstRowServices = servicesData.slice(0, 3);
-    const secondRowServices = servicesData.slice(3);
+    const rows = [];
+    const itemsPerRow = 4;
+
+    for (let i = 0; i < servicesData.length; i += itemsPerRow) {
+        const rowItems = servicesData.slice(i, i + itemsPerRow);
+        rows.push(rowItems);
+    }
 
     return (
         <>
@@ -118,55 +124,32 @@ export const ServiciosPage = () => {
                 </div>
             </section>
 
-            <section style={customStyles.section}>
-                <Grid container spacing={3} justifyContent="center">
-                    {firstRowServices.map((service, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card style={customStyles.card}>
-                                <CardMedia
-                                    component="img"
-                                    alt={service.name}
-                                    height="240" 
-                                    image={service.image}
-                                />
-                                <CardContent>
-                                    <Typography variant="h5" component="div">
-                                        {service.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Precio: {service.price}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </section>
-
-            <section style={customStyles.section}>
-                <Grid container spacing={3} justifyContent="center">
-                    {secondRowServices.map((service, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card style={customStyles.card}>
-                                <CardMedia
-                                    component="img"
-                                    alt={service.name}
-                                    height="240" 
-                                    image={service.image}
-                                />
-                                <CardContent>
-                                    <Typography variant="h5" component="div">
-                                        {service.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Precio: {service.price}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </section>
+            {rows.map((row, rowIndex) => (
+                <section key={rowIndex} style={customStyles.section}>
+                    <Grid container spacing={3} justifyContent="center">
+                        {row.map((service, index) => (
+                            <Grid item xs={12} sm={6} md={3} key={index}>
+                                <Card style={customStyles.card}>
+                                    <CardMedia
+                                        component="img"
+                                        alt={service.name}
+                                        height="260" 
+                                        image={service.image}
+                                    />
+                                    <CardContent>
+                                        <Typography variant="h5" component="div">
+                                            {service.name}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            Precio: {service.price}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </section>
+            ))}
         </>
     );
 };

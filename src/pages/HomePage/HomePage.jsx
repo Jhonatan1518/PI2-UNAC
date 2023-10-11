@@ -15,24 +15,25 @@ const customStyles = {
         margin: "0 auto",
     },
     h1: {
-        textTransform: "uppercase", 
-        fontFamily: "Comic Sans MS, sans-serif", 
-        fontSize: "30px", 
-        marginBottom: "0.5rem", 
+        textTransform: "uppercase",
+        fontFamily: "Comic Sans MS, sans-serif",
+        fontSize: "50px",
+        marginBottom: "0.5rem",
     },
     h2: {
-        fontFamily: "Comic Sans MS, sans-serif", 
-        fontSize: "25px", 
-        marginBottom: "1rem", 
+        fontFamily: "Comic Sans MS, sans-serif",
+        fontSize: "25px",
+        marginBottom: "1rem",
+        marginRight: "2rem",
     },
     img: {
-        width: "100%", 
-        height: "auto", 
+        width: "300%",
+        height: "auto",
     },
     section: {
-        padding: "1rem",
-        marginBottom: "2rem", 
-        textAlign: "center", 
+        padding: "5rem",
+        marginBottom: "2rem",
+        textAlign: "center",
     },
 };
 
@@ -57,7 +58,11 @@ export const HomePage = () => {
                         <img src={Rio} alt="Ríos de Colombia" style={customStyles.img} />
                     </div>
                     <div>
-                        <h1 style={customStyles.h1}>Nuestros planes de tour son los mejores para cumplir tus deseos de conocer Colombia.</h1>
+                        <h2 style={customStyles.h2}>Explora los destinos turísticos de Medellín y disfruta de su belleza natural.</h2>
+                        <p style={customStyles.h2}>
+                            Descubre la magia de la Ciudad de la Eterna Primavera. Recorre sus calles llenas de historia,
+                            disfruta de la deliciosa comida local y embárcate en aventuras inolvidables.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -66,10 +71,3 @@ export const HomePage = () => {
 }
 
 export default HomePage;
-
-
-
-
-
-
-
