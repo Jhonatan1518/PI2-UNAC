@@ -20,63 +20,31 @@ export const ServiciosPage = () => {
 
     return (
         <>
-            <Box sx={{
-                display: "flex",
-                flexDirection: "row",
-                marginLeft: 27,
-                alignItems: "center",
-                marginTop: 2
-            }}>
+            <Box sx={{ display: 'flex', flexDirection: 'row', marginLeft: 27, alignItems: 'center', marginTop: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <h3 style={{ fontSize: '16px', fontWeight: 'lighter', margin: 0 }}>Paquetes turísticos</h3>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', margin: 12 }}>Los increíbles lugares de Colombia</h2>
+        </Box>
+      </Box>
 
+      <Grid container spacing={5}>
+        {park.map((park, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <CardService
+              name={park.name}
+              department={park.departament}
+              city={park.city}
+              ubication={park.ubication}
+            />
+          </Grid>
+        ))}
+      </Grid>
 
-                <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-
-                }}>
-                    <h3>Paquetes turisticos</h3>
-                    <h2>Los increible lugares de Colombia</h2>
-
-                </Box>
-
-
-            </Box>
-
-            <Grid container spacing={2}>
-      {park.map((park, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
-          <CardService
-            name={park.name}
-            department={park.departament}
-            city={park.city}
-            ubication={park.ubication}
-          />
-        </Grid>
-      ))}
-    </Grid>
-            <Box sx={{
-                display: "flex",
-                flexDirection: "row",
-                marginLeft: 27,
-                alignItems: "center",
-                marginTop: 2
-            }}>
-
-
-                <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-
-                }}>
-
-                    <h1>Los mejores precios para paquetes turisticos de Colombia.</h1>
-
-                </Box>
-
-
-            </Box>
-
-
+      <Box sx={{ display: 'flex', flexDirection: 'row', marginLeft: 27, alignItems: 'center', marginTop: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>Los mejores precios para paquetes turísticos de Colombia.</h1>
+        </Box>
+      </Box>
         </>
 
 

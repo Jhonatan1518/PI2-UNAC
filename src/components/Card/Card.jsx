@@ -12,22 +12,22 @@ export const CardService = ({ name, department, city, ubication }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image={Rio}
-          alt="green iguana"
+          alt="Park Image"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{ padding: '16px' }}>
+          <Typography variant="h5" component="div">
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Department: {department}
+          <Typography variant="body1" color="textSecondary">
+            <strong>Department:</strong> {department}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            City: {city}
+          <Typography variant="body1" color="textSecondary">
+            <strong>City:</strong> {city}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Ubication: {ubication}
+          <Typography variant="body1" color="textSecondary">
+            <strong>Ubication:</strong> {ubication}
           </Typography>
         </CardContent>
       </CardActionArea>
