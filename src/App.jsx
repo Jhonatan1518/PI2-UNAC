@@ -11,8 +11,8 @@ import GuiaPage from './pages/GuiaPage/GuiaPage';
 function App() {
   return (
     <>
-    <NavBar/>
       <Router>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/profile" element={<ProfilePage />} />

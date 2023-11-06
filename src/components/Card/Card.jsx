@@ -4,11 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import Rio from '../../assets/rio.jpg'
+import Rio from '../../assets/rio.jpg';
 
 export const CardService = ({ name, department, city, ubication }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, background: '#264434', color: '#C3F8B4' }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -17,22 +17,22 @@ export const CardService = ({ name, department, city, ubication }) => {
           alt="Park Image"
         />
         <CardContent sx={{ padding: '16px' }}>
-          <Typography variant="h5" component="div">
+          <Typography variant="h5" component="div" sx={{ color: "white" }}>
             {name}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong>Department:</strong> {department}
+            <strong sx={{ color: '#9ED48F' }}>Department:</strong> {department}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong>City:</strong> {city}
+            <strong sx={{ color: '#9ED48F' }}>City:</strong> {city}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong>Ubication:</strong> {ubication}
+            <strong sx={{ color: '#9ED48F' }}>Ubication:</strong> {ubication}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
-
 }
+
 export default CardService;
