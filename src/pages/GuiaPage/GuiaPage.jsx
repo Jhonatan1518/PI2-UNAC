@@ -6,7 +6,7 @@ import Rio from '../../assets/rio.jpg'
 import carousel1 from '../../assets/carousel1.jpg'
 import carousel2 from '../../assets/carousel2.jpg'
 import carousel3 from '../../assets/carousel3.jpg'
-import map from '../../assets/map.jpg'
+import map from '../../assets/Map.jpg'
 
 
 export const GuiaPage = () => {
