@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import './App.css'
 import NavBar from './components/NavBar/NavBar';
 import ServiciosPage from './pages/ServiciesPage/ServiciosPage';
+import GuiaPage from './pages/GuiaPage/GuiaPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/servicios" element={<ServiciosPage />} />
+        <Route path="/guia" element={<GuiaPage />} />
       </Routes>
     </Router>
     </>

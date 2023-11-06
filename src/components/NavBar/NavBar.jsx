@@ -13,10 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Inicio', 'Servicios', 'Guia','Contacto'];
+const pages = ['Inicio', 'Servicios', 'Guia', 'Contacto'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export const NavBar=()=> {
+export const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,9 +36,9 @@ export const NavBar=()=> {
   };
 
   return (
-    <AppBar 
-    position="static"
-    color= "success">
+    <AppBar
+      position="static"
+      color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -59,13 +59,13 @@ export const NavBar=()=> {
             LOGO
           </Typography>
 
-          <Box sx={{ 
-            flexGrow: 1, 
+          <Box sx={{
+            flexGrow: 1,
             display: 'flex',
-            justifyContent:'center'
-            
-            }}>
-           
+            justifyContent: 'center'
+
+          }}>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -82,8 +82,8 @@ export const NavBar=()=> {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'flex', md: 'none' },
-                justifyContent:'center'
-                
+                justifyContent: 'center'
+
               }}
             >
               {pages.map((page) => (
@@ -124,18 +124,20 @@ export const NavBar=()=> {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0,
-          
-         }}>
+          <Box sx={{
+            flexGrow: 0,
+
+          }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px',
-              justifyContent:'center'
-             }}
+              sx={{
+                mt: '45px',
+                justifyContent: 'center'
+              }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
