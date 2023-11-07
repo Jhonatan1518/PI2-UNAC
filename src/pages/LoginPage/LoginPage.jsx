@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./style.module.css"
 import Palmera from '../../assets/fondo.jpg'
-import { Box } from '@mui/material';
+
 
 export const LoginPage = () => {
     return(

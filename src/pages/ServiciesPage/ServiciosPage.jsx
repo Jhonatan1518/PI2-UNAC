@@ -1,7 +1,19 @@
-import { Box, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Grid,
+  Card,
+  CardContent,
+  CardHeader,
+  Avatar,
+} from '@mui/material';
 import React, { useEffect, useState } from "react";
 import CardService from "../../components/Card/Card";
 import axios from "axios";
+import { featuresData } from "./featureData";
+import FeatureCard from "../../components/FeatureCard/FeatureCard";
 
 export const ServiciosPage = () => {
   const [park, setPark] = useState([]);
@@ -83,6 +95,32 @@ export const ServiciosPage = () => {
           ))}
         </Grid>
       )}
+    </Box>
+    <Box sx={{ marginTop:'4rem' }}>
+      <Container py={4}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            mb: 6,
+            textAlign: 'center',
+          }}
+        >
+          <Typography variant="h4" fontWeight="500" mt={2} color="#333">
+            Nuestros servicios
+          </Typography>
+          <Typography variant="body1" color="#666" maxWidth="50ch" mt={2} mx="auto">
+            Al hacer parte de nuestros servicios pueden tener los sigueintes beneficios
+            </Typography>
+        </Box>
+        <Grid container spacing={4}>
+          {featuresData.map((feature, index) => (
+            <FeatureCard key={index} {...feature} />
+          ))}
+        </Grid>
+      </Container>
     </Box>
     </Box>
   );

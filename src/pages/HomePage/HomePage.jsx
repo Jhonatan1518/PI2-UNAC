@@ -3,6 +3,7 @@ import React from "react";
 import Indio from "../../assets/indio.jpg";
 import Mujer from "../../assets/mujer.jpg";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
+import GallerySection from "../../components/GallerySection/GallerySection";
 
 export const HomePage = () => {
   return (
@@ -77,7 +78,9 @@ export const HomePage = () => {
             segura.
           </Typography>
         </Box>
+        
       </Box>
+      <GallerySection/>
     </>
   );
 };
