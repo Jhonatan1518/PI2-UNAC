@@ -90,6 +90,7 @@ export const ServiciosPage = () => {
                 department={park.departament}
                 city={park.city}
                 ubication={park.ubication}
+                image={park.image}
               />
             </Grid>
           ))}

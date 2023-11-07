@@ -6,14 +6,14 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Rio from '../../assets/rio.jpg';
 
-export const CardService = ({ name, department, city, ubication }) => {
+export const CardService = ({ name, department, city, ubication,image }) => {
   return (
     <Card sx={{ maxWidth: 345, background: '  #99dfff', color: '  #99dfff' }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image={Rio}
+          image={image}
           alt="Park Image"
         />
         <CardContent sx={{ padding: '16px' }}>
