@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import Palmera from '../../assets/fondo.jpg'
+import { Link } from 'react-router-dom';
 export const HomeBanner = () => {
   return (
     <Box
@@ -19,8 +20,10 @@ export const HomeBanner = () => {
       <Typography variant="h6" sx={{ fontSize: '18px', marginBottom: '30px' }}>
         Descubre nuestros servicios y encuentra la aventura que estás buscando.
       </Typography>
-      <Button variant="contained" color="primary" size="large">
+       <Button variant="contained" color="primary" size="large">
+       <Link to="/servicios">
         Ver Servicios
+      </Link>
       </Button>
     </Box>
   );

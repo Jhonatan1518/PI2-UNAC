@@ -6,7 +6,7 @@ import Rio from "../../assets/rio.jpg";
 import carousel1 from "../../assets/carousel1.jpg";
 import carousel2 from "../../assets/carousel2.jpg";
 import carousel3 from "../../assets/carousel3.jpg";
-import map from "../../assets/map.jpg";
+import bolso from "../../assets/mochilero.jpg";
 
 export const GuiaPage = () => {
   return (
@@ -30,7 +30,8 @@ export const GuiaPage = () => {
             marginTop: 2,
           }}
         >
-          <img src={map} />
+          <img src={bolso} 
+          style={{height: 500}} />
 
           <Box
             sx={{
