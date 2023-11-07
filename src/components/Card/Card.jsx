@@ -8,7 +8,7 @@ import Rio from '../../assets/rio.jpg';
 
 export const CardService = ({ name, department, city, ubication }) => {
   return (
-    <Card sx={{ maxWidth: 345, background: '#264434', color: '#C3F8B4' }}>
+    <Card sx={{ maxWidth: 345, background: '  #99dfff', color: '  #99dfff' }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -21,13 +21,13 @@ export const CardService = ({ name, department, city, ubication }) => {
             {name}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong sx={{ color: '#9ED48F' }}>Department:</strong> {department}
+            <strong sx={{ color: '  #99dfff' }}>Department:</strong> {department}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong sx={{ color: '#9ED48F' }}>City:</strong> {city}
+            <strong sx={{ color: '  #99dfff' }}>City:</strong> {city}
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            <strong sx={{ color: '#9ED48F' }}>Ubication:</strong> {ubication}
+            <strong sx={{ color: '  #99dfff' }}>Ubication:</strong> {ubication}
           </Typography>
         </CardContent>
       </CardActionArea>

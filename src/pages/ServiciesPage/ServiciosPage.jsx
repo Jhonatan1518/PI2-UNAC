@@ -35,7 +35,7 @@ export const ServiciosPage = () => {
   }, []);
 
   return (
-    <Box sx={{ padding: 2, background: "linear-gradient(to right, #5EC465, #9ED48F)" }}>
+    <Box sx={{ padding: 2, background: "linear-gradient(to right, #53c4f7,  #99dfff)" }}>
       <Box>
       <Typography variant="h3" sx={{ fontWeight: "bold", color: "white", marginBottom: 4 }}>
         Descubre los Parques en Colombia
@@ -51,7 +51,7 @@ export const ServiciosPage = () => {
     padding: "10px",
     fontSize: "16px",
     borderRadius: "20px",
-    border: "2px solid #3A8057",
+    border: "2px solid #99dfff",
     marginBottom: "16px",
   }}
 />
