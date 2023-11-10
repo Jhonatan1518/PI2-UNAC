@@ -1,13 +1,25 @@
-FROM node:lts-bullseye as build 
-WORKDIR /app 
-COPY package*.json ./ 
-RUN npm ci 
-COPY . . 
-RUN npm run build 
- 
- 
-FROM nginx:alpine 
-ADD ./config/default.conf /etc/nginx/conf.d/default.conf 
-COPY --from=build /app/dist /var/www/app/ 
-EXPOSE 80 
-CMD [ "nginx","-g","daemon off;" ]
+
+FROM node:latest
+
+# create the directory inside the container
+RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+
+WORKDIR /home/node/app
+
+# copy the package.json files from local machine to the workdir in container
+COPY --chown=node:node package*.json ./
+
+# run npm install in our local machine
+RUN npm install
+
+# copy the generated modules and all other files to the container
+COPY --chown=node:node . .
+
+USER node
+
+# our app is running on
+# our app is running on port 3000 within the container, so need to expose it
+EXPOSE 3282
+
+# the command that starts our app
+ENTRYPOINT [ "node", "index.js" ]

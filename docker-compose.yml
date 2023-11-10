@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  turissostenible:  
+    container_name: turissostenible-frontend
+    build:
+      context: ./
+    ports:
+      - 3282:3282
